@@ -1,0 +1,263 @@
+@import "normalize.scss";
+@import "layout.scss";
+
+body{
+	font: 400 18px/1.3 "Open Sans", Arial, sans-serif;
+	color: #a0a9af;
+
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 60px;
+	padding-right: 60px;
+	margin: 0;
+}
+
+.ba-header{
+	position: fixed;
+	top: 0;
+	padding-top: 50px;
+	width: 100%;
+	z-index: 5;
+	
+	&__logo{
+		float: left;
+	}
+	&__cart{
+		float: right;
+		height: 40px;
+		background: url("../img/cart.png") 50% no-repeat;
+		background-position: cover;
+		padding-right: 60px;
+		line-height: 40px;
+		
+		& span{
+			display: inline-block;
+			background: red;
+			border-radius: 50%;
+			width: 26px;
+			height: 26px;
+			line-height: 26px;
+			text-align: center;
+			vertical-align: middle;
+			color: #fff;
+			margin-right: 10px;
+			font-size: 16px;
+		}
+		&:hover{
+			transform: translateY(5px);
+			transition: transform .3s;
+		}
+	}
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+@import "slick.scss";
+@import "slick-theme.scss";
+
+.ba-slider{
+	min-height: 100vh;
+}
+.ba-footer{
+	position: fixed;
+	bottom: 0;
+	padding-bottom: 50px;
+	width: 100%;
+	
+	&__nav{
+		float: right;
+	}
+	&__menu{
+		list-style: none;
+		
+		& li{
+			display: inline-block;
+			margin-left: 20px;
+			
+			& a{
+				font-size: 14px;
+				color: #A0A9AF;
+				text-decoration: none;
+				&:hover{
+					color: red;
+				}
+			}
+		}
+	}
+}
+.ba-slide > .ba-container{
+	width: 200px;
+	margin: 0;
+	padding-right: 60px;
+}
+
+.ba-slide{
+	padding: 150px 0 270px;
+	min-height: 100vh;
+	border: none;
+	outline: none;
+	
+	&__title{
+		margin: 50px 0 0;
+		letter-spacing: .14em;
+	}
+	&__slogan{
+		font-size: 28px;
+		line-height: 32px;
+		color: #2F2D2D;
+		display: block;
+		width: 180px;
+		margin: 20px 0 0;
+	}
+	&__link{
+		text-decoration: none;
+		color: red;
+		font-weight: 700;
+		font-size: 16px;
+		margin-top: 30px;
+	}	
+	&__price{
+		font-size: 40px;
+		display: block;
+		
+	}
+}
+
+.ba-slide--gold{
+	background: #FCEEC0 url("../img/watch1.png") 50% no-repeat;
+	background-size: contain;
+}
+.ba-slide--silver{
+	background: url("../img/watch2.png") 50% no-repeat;
+	background-size: contain;
+}
+.ba-slide--diamond{
+	background: #111 url("../img/watch3.png") 50% no-repeat;
+	background-size: contain;
+	&__img{
+		display: block;
+		background: #fff;
+		padding: 10px;
+	}
+	&__slogan{
+		color: #fff;
+	}
+}
+
+.slick-arrow{
+		position: absolute;
+		left: 60px;
+		z-index: 2;
+		bottom: 100px;
+		width: 44px;
+		height: 44px;
+		border: none;
+		background: no-repeat 50%;
+		text-indent: -99999px;
+		border-radius: 50%;
+		outline:none;
+		&:focus{
+			background-color: #FFF;
+		}
+		&:active{
+			background-color: red;
+		}
+		&.slick-disabled{
+			pointer-events: none;
+			opacity: 0.5;
+		}
+	}
+	.slick-prev{
+		background-image: url(../img/up.svg);
+	}
+	.slick-next{
+		background-image: url(../img/down.svg);
+		margin-left: 55px;
+}
+
+.slick-dots {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  list-style: none;
+  top: 50%;
+  right: 60px;
+
+}
+
+.slick-dots button {
+  width: 10px;
+  height: 10px;
+  text-indent: -9999px;
+  background: #A0A9AF;
+  margin: 4px 0;
+  padding: 0;
+  border-radius: 5px;
+  border: none;
+  display: block;
+  transition: height .3s ease-in;
+}
+
+.slick-dots button:focus, .slick-dots button:hover {
+  background: #FFF;
+  outline: none;
+}
+
+.slick-dots .slick-active button {
+  background: red;
+  height: 20px;
+}
+
+
